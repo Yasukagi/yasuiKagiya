@@ -18,8 +18,8 @@ Gradleをインストールしてくれるヤツ．使う為にはgradlewかgrad
 Mac/Unix用のスクリプト．実行すると勝手にGradleをインスコする
 - gradlew.bat  
 Windows用のスクリプト．上に同じ  
-## ディレクトリ構成
 
+## ディレクトリ構成
 ```
 yasuiKagiya/
 |-- src
