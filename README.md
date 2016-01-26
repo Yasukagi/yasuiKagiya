@@ -9,7 +9,7 @@ webサービスのモデルはMVCモデルを利用したものとする。
 - Webサーバ：Tomcat
 - テスト：JUnit
 - ビルドツール：なんでも
-
+- データベース：MySQL
 ### Gradle
 インストール方法→gradlewを実行するだけ (windowsならgradlew.bat
 - gradle/wrapper  
