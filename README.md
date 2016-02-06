@@ -23,12 +23,13 @@ Windows用のスクリプト．上に同じ
 ```
 yasuiKagiya/
 |-- src
-|   |-- java ****//javaのソースはここに置く
-|   |-- jsp ****//jspのソースはここに置く（webapp以下では管理しない）
-|   |-- resources ****//データベースとかのリソース
-|   |-- webapp ****//Tomcatへデプロイするためのディレクトリ
-|
-|-- test
-    |-- java ****//テスト用
-    |-- resources ****//テスト用
+|   |-- main
+|   |   |-- java ****//javaのソースはここに置く
+|   |   |-- jsp ****//jspのソースはここに置く（webapp以下では管理しない）
+|   |   |-- resources ****//データベースとかのリソース
+|   |   |-- webapp ****//Tomcatへデプロイするためのディレクトリ
+|   |
+|-- |-- test
+        |-- java ****//テスト用
+        |-- resources ****//テスト用
 ```
