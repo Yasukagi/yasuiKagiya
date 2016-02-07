@@ -1,9 +1,5 @@
-<%@ page contentType="text/html; charset=utf-8" %>
 <%@ page import="java.util.Date" %>
-<html>
-<head>
-    <title>yasukagi</title>
-</head>
+
 <body>
 <p>yasukagi.com</p>
 <%
@@ -13,4 +9,3 @@
 <br>
 <a href="./Test">Goto testServlet</a>
 </body>
-</html>

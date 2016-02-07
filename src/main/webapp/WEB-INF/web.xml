@@ -3,6 +3,14 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          version="2.5">
+    <jsp-config>
+        <jsp-property-group>
+            <url-pattern>*.jsp</url-pattern>
+            <page-encoding>utf-8</page-encoding>
+            <include-prelude>/common/header.jsp</include-prelude>
+            <include-coda>/common/footer.jsp</include-coda>
+        </jsp-property-group>
+    </jsp-config>
     <servlet>
         <servlet-name>test</servlet-name>
         <servlet-class>com.yasukagi.testServlet</servlet-class>
