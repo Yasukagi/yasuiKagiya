@@ -31,7 +31,10 @@ yasuiKagiya/
 |   |   |-- resources ****//データベースとかのリソース
 |   |   |-- webapp ****//Tomcatへデプロイするためのディレクトリ
 |   |
-|-- |-- test
+|   |-- test
         |-- java ****//テスト用
         |-- resources ****//テスト用
 ```
+
+## データベース接続
+とりあえず，id=root, pass=rootのlocalhost上で動いてるDBに対して接続するようになった
