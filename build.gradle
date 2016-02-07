@@ -4,8 +4,6 @@ version 'Alpha'
 apply plugin: 'java'
 apply plugin: 'war'
 
-sourceCompatibility = 1.7
-
 repositories {
     mavenCentral()
 }
@@ -13,6 +11,7 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
     providedCompile group: 'javax', name: 'javaee-api', version: '7.0'
+    compile "mysql:mysql-connector-java:5.1.38"
 }
 war{
     from 'src/main/jsp'
