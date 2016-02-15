@@ -17,11 +17,11 @@ public class testServlet extends HttpServlet{
         SteamGameListDao dao = new SteamGameListDao();
         List<SteamGameList> list = dao.findAll();
         resp.getWriter().println("HELLO YASUI KAGIYA");
-        resp.getWriter().println("====ゲームリスト====");
+        resp.getWriter().println("====Game List====");
         for (Iterator<SteamGameList> it = list.iterator(); it.hasNext(); ) {
             SteamGameList steamGameList = it.next();
             resp.getWriter().println("APP_ID:" + steamGameList.getAppId());
-            resp.getWriter().println("TITLE::" + steamGameList.getGameTitle());
+            resp.getWriter().println("TITLE:" + steamGameList.getGameTitle());
         }
     }
 }
