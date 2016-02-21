@@ -1,0 +1,79 @@
+*::after, *::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*clear fix*/
+.top-logo-pane::after,
+.top-logo-pane::before,
+.top-menu-pane::after,
+.top-menu-pane::before,
+.under-column::after,
+.under-column::before,
+.under-panel::after,
+.under-panel::before {
+    content: " ";
+    display: table;
+}
+
+.top-logo-pane::after,
+.top-menu-pane::after,
+.under-column::after,
+.under-panel::after {
+    clear: both;
+}
+
+.top-logo-pane,
+.top-menu-pan,
+.under-column,
+.under-panel {
+    *zoom: 1;
+}
+
+body {
+    background-color: #ffcfcf;
+}
+
+.main-panel {
+    background-color: #ff7777;
+}
+
+ul.top-menu-pane li {
+    float: left;
+    list-style-type: none;
+    background-color: #66ff66;
+    border-left: 1px solid #ffffff;
+}
+
+.under-panel .under-column {
+    float: left;
+    width: 350px;
+}
+
+.under-panel .under-column ul {
+    padding: 0;
+}
+.under-panel .under-column ul li {
+    list-style-type: none;
+    background-color: #6666ff;
+}
+
+#logo-pane {
+    float: left;
+}
+
+.top-menu-pane li > a {
+    padding: 0 15px;
+    line-height: 100px;
+    display: block;
+}
+
+#app-search {
+    background-color: #9999ff
+}
+
+header {
+    height: 100px;
+    background-color: #666666;
+}
