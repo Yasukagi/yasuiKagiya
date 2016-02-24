@@ -22,11 +22,17 @@ Java本体
 ### 構築手順
 Javaをインスト→Tomcatインスト→httpd(Apache HTTP Server)インスト→tomcatのデフォルトポート無効化→apacheをtomcatに接続
 
-1. Javaのインストール`$ yum install java-1.8.0-openjdk.x86_64`
-2. `$ export JAVA_HOME=/usr/lib/jvm/jre-1.8.0-openjdk.x86_64`
-3. a
-  1. a
+```
+$ su - root
+# yum install java-1.8.0-openjdk.x86_64  //Javaインスト
+# export JAVA_HOME=/usr/lib/jvm/jre-1.8.0-openjdk.x86_64  //環境変数にJAVA_HOMEを設定
+# wget http://ftp.yz.yamagata-u.ac.jp/pub/network/apache/tomcat/tomcat-9/v9.0.0.M3/bin/apache-tomcat-9.0.0.M3.tar.gz  // tomcatのダウンロード(yumには最新のパッケージがない)
+# tar xvzf apache-tomcat-9.0.0.M3.tar.gz
+# mv tomcat /usr/local/  //tomcatのインストール
+# export CATALINA_HOME=/usr/local/tomcat
+#
 
+```
 
 ## メールサーバ(Postfix/Dovecot)
 
