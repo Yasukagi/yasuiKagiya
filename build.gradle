@@ -4,6 +4,9 @@ version 'Alpha'
 apply plugin: 'java'
 apply plugin: 'war'
 
+sourceCompatibility = '1.8' // -source
+targetCompatibility = '1.8' // -target
+
 repositories {
     mavenCentral()
 }
