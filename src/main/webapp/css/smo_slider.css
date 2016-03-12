@@ -1,0 +1,33 @@
+/*ClearFix*/
+
+/*smo-slikder usage:*/
+.smo-slider {
+  position: relative;
+  margin: 0 0 10px 0;
+  overflow: hidden;
+  padding: 40px 0 60px 0;
+}
+
+.smo-slider ul {
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  list-style-type: none;
+}
+
+.smo-slider ul li {
+  transform: translateZ(0);
+  float: left;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.smo-slider ul li > a,
+.smo-slider ul li > div {
+  display: block;
+  text-align: center;
+  outline: none;
+}
+
+.smo-slider
