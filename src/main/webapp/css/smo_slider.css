@@ -30,4 +30,48 @@
   outline: none;
 }
 
-.smo-slider
+.smo-slider nav span {
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 100px;
+  background: #47a3da;
+  color: #fff;
+  font-size: 50px;
+  text-align: center;
+  margin-top: -50px;
+  line-height: 100px;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+.smo-slider nav span:hover {
+  background: #378fc3;
+}
+
+.smo-slider nav span.smo-slider-next {
+  right: 0px;
+}
+.smo-slider nav span.smo-slider-prev {
+  left: 0px;
+ }
+
+.smo-slider-dots span {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: #ddd;
+  margin: 4px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.smo-slider-dots span:hover {
+  background: #999;
+}
+
+.smo-slider-dots span.smo-slider-current {
+  background: #47a3da;
+  box-shadow: 0 0 0 3px #47a3da;
+  transition: box-shadow 0.3s ease-in-out;
+}
