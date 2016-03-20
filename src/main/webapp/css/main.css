@@ -12,7 +12,8 @@
 .under-column::after,
 .under-column::before,
 .under-panel::after,
-.under-panel::before {
+.under-panel::before
+{
     content: " ";
     display: table;
 }
@@ -20,14 +21,16 @@
 .top-logo-pane::after,
 .top-menu-pane::after,
 .under-column::after,
-.under-panel::after {
+.under-panel::after
+{
     clear: both;
 }
 
 .top-logo-pane,
 .top-menu-pan,
 .under-column,
-.under-panel {
+.under-panel
+{
     *zoom: 1;
 }
 
