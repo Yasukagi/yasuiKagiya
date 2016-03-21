@@ -4,7 +4,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SteamGameListDao implements iSteamGameListDao {
+public class SteamGameListDao implements ISteamGameListDao {
 
     private List<SteamGameList> convert(ResultSet rs) throws SQLException{
         List<SteamGameList> list = new ArrayList<>();
