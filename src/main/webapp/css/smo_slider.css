@@ -56,6 +56,14 @@
   left: 0px;
  }
 
+.smo-slider-dots {
+  position: absolute;
+  bottom: 0px;
+  white-space: nowrap;
+  width: 100%;
+  text-align: center;
+}
+
 .smo-slider-dots span {
   display: inline-block;
   width: 18px;
