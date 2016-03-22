@@ -69,7 +69,7 @@
       this.$items.css('width', 100 / this.itemsCount + '%');
 
       if (this.itemsCount > 1) {
-        this.$navPrev = $('<span class="smo-slider-prev"></span>').hide();
+        this.$navPrev = $('<span class="smo-slider-prev"></span>');
         this.$navNext = $('<span class="smo-slider-next"></span>');
         //<タグ/>をセレクタに与えると，タグを新たに生成する
         $('<nav/>').append(this.$navPrev, this.$navNext).appendTo(this.$el);
@@ -100,16 +100,17 @@
       this.isAnimating = true;
 
       this.old = this.current;
-      if (direction === 'next' && this.current < this.itemsCount -1) {
-        ++this.current;
-      } else if (direction === 'previous' && this.current > 0) {
-        --this.current;
+      if (direction === 'next') {
+        this.current < this.itemsCount -1 ? ++this.current : this.current = 0;
+      }
+      if (direction === 'previous') {
+        this.current > 0 ? --this.current : this.current = this.itemsCount -1;
       }
 
       this._slide();
     },
     _slide: function () {
-      this._toggleNavControls();
+      this.$navDots.eq(this.old).removeClass('smo-slider-current').end().eq(this.current).addClass('smo-slider-current');
 
       var translateVal = -1 * this.current * 100 / this.itemsCount;
       if (this.support) {
@@ -130,23 +131,6 @@
         transitionendfn.call();
       }
     },
-
-    /**
-     *
-     * @private
-     */
-    _toggleNavControls: function () {
-      switch(this.current) {
-        case 0 :
-          this.$navNext.show(); this.$navPrev.hide(); break;
-        case this.itemsCount - 1 :
-          this.$navNext.hide(); this.$navPrev.show(); break;
-        default :
-          this.$navNext.show(); this.$navPrev.show(); break;
-      }
-      this.$navDots.eq(this.old).removeClass('smo-slider-current').end().eq(this.current).addClass('smo-slider-current');
-    },
-
     _jump: function (position) {
       if (position === this.current || this.isAnimating) {
         return false;
