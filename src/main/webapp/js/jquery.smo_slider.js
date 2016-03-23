@@ -46,15 +46,15 @@
       this.support3d = Modernizr.csstransform3d;
 
       var transProperties = {
-        'WebkitTransition' : { transitionEndEvent : 'webkitTransitionEnd', tranformName : '-webkit-transform' },
-        'MozTransition' : { transitionEndEvent : 'transitionend', tranformName : '-moz-transform' },
-        'OTransition' : { transitionEndEvent : 'oTransitionEnd', tranformName : '-o-transform' },
-        'msTransition' : { transitionEndEvent : 'MSTransitionEnd', tranformName : '-ms-transform' },
-        'transition' : { transitionEndEvent : 'transitionend', tranformName : 'transform' }
+        'WebkitTransition' : { transitionEndEvent : 'webkitTransitionEnd', transformName : '-webkit-transform' },
+        'MozTransition' : { transitionEndEvent : 'transitionend', transformName : '-moz-transform' },
+        'OTransition' : { transitionEndEvent : 'oTransitionEnd', transformName : '-o-transform' },
+        'msTransition' : { transitionEndEvent : 'MSTransitionEnd', transformName : '-ms-transform' },
+        'transition' : { transitionEndEvent : 'transitionend', transformName : 'transform' }
       };
       if (this.support) {
         this.transEndEventName = transProperties[ Modernizr.prefixed( 'transition' ) ].transitionEndEvent + '.smoSlider';
-        this.transformName = transProperties[ Modernizr.prefixed( 'transition' ) ].tranformName;
+        this.transformName = transProperties[ Modernizr.prefixed( 'transition' ) ].transformName;
       }
 
       this.current = 0;
