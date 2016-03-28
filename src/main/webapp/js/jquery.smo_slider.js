@@ -2,15 +2,22 @@
  * smo_slider (smooth_slider)
  * jQueryプラグイン
  * よくあるスライドショー．．．
+ * usage:
+ * $(selector).smoSlider([options]);
+ *
+ * options : {
+ * speed : 500,
+ * easing : 'ease'
+ * }
  */
 ;(function ($, window, undefined) {
   "use strict";
   var Modernizr = window.Modernizr;
 
   /**
-   *
-   * @param options
-   * @param element
+   * SmoSliderを初期化する
+   * @param options オプションパラメータ
+   * @param element 選択している要素．jQueryオブジェクトで保持する
    * @constructor
    */
   $.SmoSlider = function (options, element) {
@@ -19,7 +26,9 @@
   };
 
   /**
-   *
+   * オプション指定が無い場合のデフォルト値
+   * speed: スライドするスピード．値が小さいほうが早い
+   * easing: アニメーションの変化． ease、linear、ease-in、ease-out、ease-in-outなど設定
    * @type {{speed: number, easing: string}}
    */
   $.SmoSlider.defaults = {
@@ -170,30 +179,14 @@
    * @constructor
    */
   $.fn.smoSlider = function(options) {
-    if (typeof options === 'string') {
-      var args = Array.prototype.slice.call(arguments, 1); //引数群を配列化
-      this.each(function() {
-        var instance = $.data(this, 'smoSlider');
-        if (!instance) {
-          logError("cannnot call smoSlider" + options);
-          return;
-        }
-        if (!$.isFunction(instance[options]) || options.charAt(0) === "_") {
-          logError("no such method" + options);
-          return;
-        }
-        instance[options].apply(instance, args);
-      });
-    } else {
-      this.each(function() {
-        var instance = $.data(this, 'smoSlider');
-        if (instance) {
-          instance._init();
-        } else {
-          instance = $.data(this, 'smoSlider', new $.SmoSlider(options, this));
-        }
-      })
-    }
+    this.each(function() {
+      var instance = $.data(this, 'smoSlider');
+      if (instance) {
+        instance._init();
+      } else {
+        $.data(this, 'smoSlider', new $.SmoSlider(options, this));
+      }
+    });
     return this;
   };
 })(jQuery, window);
