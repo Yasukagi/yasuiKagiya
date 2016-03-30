@@ -78,8 +78,8 @@
       this.$items.css('width', 100 / this.itemsCount + '%');
 
       if (this.itemsCount > 1) {
-        this.$navPrev = $('<span class="smo-slider-prev"></span>');
-        this.$navNext = $('<span class="smo-slider-next"></span>');
+        this.$navPrev = $('<span class="smo-slider-prev"><</span>');
+        this.$navNext = $('<span class="smo-slider-next">></span>');
         //<タグ/>をセレクタに与えると，タグを新たに生成する
         $('<nav/>').append(this.$navPrev, this.$navNext).appendTo(this.$el);
 

@@ -6,23 +6,27 @@
     <meta name="description" content="安い鍵屋を紹介します">
 
     <script type="text/javascript" src="js/jquery-2.2.1.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
 </head>
 <body>
-<header role="banner">
-    <div id="logo-pane" class="top-logo-pane">
+<header id="header" role="banner">
+    <div class="top-logo-pane">
         <a href="/">安鍵.com</a>
-        <i>安い鍵屋を紹介します</i>
     </div>
-    <nav>
-        <ul class="top-menu-pane" role="">
-            <li>
-                <a href="/">ホーム</a>
-            </li>
-            <li>
-                <a href="/register_store">鍵屋別登録方法</a>
-            </li>
-        </ul>
-    </nav>
+    <div class="top-menu-pane">
+        <nav class="top-menu-nav">
+            <ul role="">
+                <li>
+                    <a href="/">ホーム</a>
+                </li>
+                <li>
+                    <a href="/register_store">鍵屋を知る</a>
+                </li>
+            </ul>
+        </nav>
+        <form class="top-menu-search" action="/search" method="get" role="search">
+            <input type="search" placeholder="ゲームを検索" name="q" autocomplete="off">
+            <button type="submit">検索</button>
+        </form>
+    </div>
 </header>
-<hr>

@@ -1,8 +1,6 @@
 <link rel="stylesheet" type="text/css" href="css/smo_slider.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
 <main id="main-content" role="main">
-    <form id="app-search" action="/search" method="get" role="search">
-        <input type="search" placeholder="ゲームを検索" name="q" autocomplete="off">
-    </form>
     <div class="main-panel smo-slider">
         <ul>
             <li>
@@ -48,22 +46,26 @@
                 <li>
                     <a href="./app/gametitle">
                         <img src="http://placehold.it/96x54" alt="gametitle">
-                        <div class="gametitle">
-                            gametitle
-                        </div>
-                        <div class="price">
-                            \price
+                        <div>
+                            <div class="gametitle">
+                                gametitle
+                            </div>
+                            <div class="price">
+                                \price
+                            </div>
                         </div>
                     </a>
                 </li>
                 <li>
                     <a href="./app/gametitle">
                         <img src="http://placehold.it/96x54" alt="gametitle">
-                        <div class="gametitle">
-                            gametitle
-                        </div>
-                        <div class="price">
-                            \price
+                        <div>
+                            <div class="gametitle">
+                                gametitle
+                            </div>
+                            <div class="price">
+                                \price
+                            </div>
                         </div>
                     </a>
                 </li>
@@ -75,22 +77,26 @@
                 <li>
                     <a href="./app/gametitle">
                         <img src="http://placehold.it/96x54" alt="gametitle">
-                        <div class="gametitle">
-                            gametitle
-                        </div>
-                        <div class="price">
-                            \price
+                        <div>
+                            <div class="gametitle">
+                                gametitle
+                            </div>
+                            <div class="price">
+                                \price
+                            </div>
                         </div>
                     </a>
                 </li>
                 <li>
                     <a href="./app/gametitle">
                         <img src="http://placehold.it/96x54" alt="gametitle">
-                        <div class="gametitle">
-                            gametitle
-                        </div>
-                        <div class="price">
-                            \price
+                        <div>
+                            <div class="gametitle">
+                                gametitle
+                            </div>
+                            <div class="price">
+                                \price
+                            </div>
                         </div>
                     </a>
                 </li>
@@ -102,22 +108,26 @@
                 <li>
                     <a href="./app/gametitle">
                         <img src="http://placehold.it/96x54" alt="gametitle">
-                        <div class="gametitle">
-                            gametitle
-                        </div>
-                        <div class="price">
-                            \price
+                        <div>
+                            <div class="gametitle">
+                                gametitle
+                            </div>
+                            <div class="price">
+                                \price
+                            </div>
                         </div>
                     </a>
                 </li>
                 <li>
                     <a href="./app/gametitle">
                         <img src="http://placehold.it/96x54" alt="gametitle">
-                        <div class="gametitle">
-                            gametitle
-                        </div>
-                        <div class="price">
-                            \price
+                        <div>
+                            <div class="gametitle">
+                                gametitle
+                            </div>
+                            <div class="price">
+                                \price
+                            </div>
                         </div>
                     </a>
                 </li>

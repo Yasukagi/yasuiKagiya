@@ -1,0 +1,99 @@
+body {
+  margin: 0px;
+  background-color: #3a3a3a;
+}
+
+header {
+  display: block;
+  height: 100px;
+  position:relative;
+  z-index: 666;
+  background-color: #d6d6d6;
+  -webkit-box-shadow: 0 10px 20px 1px rgba(1,1,1,0.3);
+  box-shadow: 0 10px 20px 1px rgba(1,1,1,0.3);
+}
+
+.top-logo-pane {
+  display: inline-block;
+  vertical-align: top;
+  height: 100%;
+  width: 200px;
+}
+
+.top-logo-pane a {
+  font-size: 20pt;
+  text-decoration: none;
+}
+
+.top-menu-pane {
+  display: inline-block;
+  vertical-align: top;
+  height: 100%;
+  width: 50%;
+  padding: 0px;
+}
+
+
+.top-menu-nav {
+  display: inline-block;
+  vertical-align: top;
+  height: 70%;
+}
+
+.top-menu-nav ul {
+  margin: 0px;
+  padding: 0px;;
+  font-size: 0px;
+}
+
+.top-menu-nav ul > li {
+  display: inline-block;
+  vertical-align: top;
+  list-style-type: none;
+  font-size: 12pt;
+  height: 100%;
+}
+
+.top-menu-nav ul > li > a {
+  display: block;
+  height: 100%;
+  text-align: center;
+  /*上下中央揃え．決め打ち値*/
+  line-height: 70px;
+  padding: 0 5px;
+  text-decoration: none;
+}
+
+.top-menu-nav ul > li > a:hover {
+  background-color: #ffffff;
+}
+
+.top-menu-search {
+  height: 30%;
+  font-size: 0px;
+}
+
+.top-menu-search input {
+  width: 90%;
+  height: 100%;
+  border: none;
+  padding: 0;
+}
+.top-menu-search button {
+  display:inline-block;
+  border: none;
+  vertical-align: top;
+  font-size: 12pt;
+  margin: 0;
+  padding: 0;
+  width: 8%;
+  height: 100%;
+}
+
+.top-menu-search button:hover {
+  background-color: #5d5d5d;
+}
+
+footer {
+  background-color: #3a3a3a;
+}

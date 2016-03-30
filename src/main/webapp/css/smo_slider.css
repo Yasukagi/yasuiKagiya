@@ -32,21 +32,19 @@
 
 .smo-slider nav span {
   position: absolute;
-  top: 50%;
   width: 50px;
-  height: 100px;
-  background: #47a3da;
+  height: 100%;
+  background-color: rgba(0 ,0 ,0 ,0);
   color: #fff;
   font-size: 50px;
   text-align: center;
   margin-top: -50px;
-  line-height: 100px;
   cursor: pointer;
   font-weight: normal;
 }
 
 .smo-slider nav span:hover {
-  background: #378fc3;
+  background-color: rgba(0 ,0 ,0 ,1);
 }
 
 .smo-slider nav span.smo-slider-next {
@@ -75,11 +73,11 @@
 }
 
 .smo-slider-dots span:hover {
-  background: #999;
+  background: #ffffff;
 }
 
 .smo-slider-dots span.smo-slider-current {
-  background: #47a3da;
-  box-shadow: 0 0 0 3px #47a3da;
+  background: #000000;
+  box-shadow: 0 0 0 3px #8c8c8c;
   transition: box-shadow 0.3s ease-in-out;
 }
