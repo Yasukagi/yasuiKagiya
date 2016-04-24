@@ -3,39 +3,21 @@
 <main id="main-content" role="main">
     <div class="main-panel smo-slider">
         <ul>
-            <li>
-                <a href="./app/gametitle">
-                    <img src="http://placehold.it/640x360" alt="gametitle">
-                    <div class="gametitle">
-                        gametitle
-                    </div>
-                    <div class="price">
-                        \price
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="./app/gametitle">
-                    <img src="http://placehold.it/640x360" alt="gametitle">
-                    <div class="gametitle">
-                        gametitle
-                    </div>
-                    <div class="price">
-                        \price
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="./app/gametitle">
-                    <img src="http://placehold.it/640x360" alt="gametitle">
-                    <div class="gametitle">
-                        gametitle
-                    </div>
-                    <div class="price">
-                        \price
-                    </div>
-                </a>
-            </li>
+            <%--出力形式サンプル - メインパネル--%>
+            <%--<li>--%>
+                <%--<a href="./app/gametitle">--%>
+                    <%--<img src="http://placehold.it/640x360" alt="gametitle">--%>
+                    <%--<div class="gametitle">--%>
+                        <%--gametitle--%>
+                    <%--</div>--%>
+                    <%--<div class="price">--%>
+                        <%--\price--%>
+                    <%--</div>--%>
+                <%--</a>--%>
+            <%--</li>--%>
+                <%
+                    request.getRequestDispatcher("main-panel").include(request, response);
+                %>
         </ul>
     </div>
 
@@ -43,94 +25,67 @@
         <div class="under-column">
             人気のゲーム
             <ul>
-                <li>
-                    <a href="./app/gametitle">
-                        <img src="http://placehold.it/96x54" alt="gametitle">
-                        <div>
-                            <div class="gametitle">
-                                gametitle
-                            </div>
-                            <div class="price">
-                                \price
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="./app/gametitle">
-                        <img src="http://placehold.it/96x54" alt="gametitle">
-                        <div>
-                            <div class="gametitle">
-                                gametitle
-                            </div>
-                            <div class="price">
-                                \price
-                            </div>
-                        </div>
-                    </a>
-                </li>
+                <%--出力形式サンプル - アンダーパネル--%>
+                <%--<li>--%>
+                    <%--<a href="./app/gametitle">--%>
+                        <%--<img src="http://placehold.it/96x54" alt="gametitle">--%>
+                        <%--<div>--%>
+                            <%--<div class="gametitle">--%>
+                                <%--gametitle--%>
+                            <%--</div>--%>
+                            <%--<div class="price">--%>
+                                <%--\price--%>
+                            <%--</div>--%>
+                        <%--</div>--%>
+                    <%--</a>--%>
+                <%--</li>--%>
+                    <%
+                        request.getRequestDispatcher("popular-panel").include(request, response);
+                    %>
             </ul>
         </div>
         <div class="under-column">
             新規ゲーム
             <ul>
-                <li>
-                    <a href="./app/gametitle">
-                        <img src="http://placehold.it/96x54" alt="gametitle">
-                        <div>
-                            <div class="gametitle">
-                                gametitle
-                            </div>
-                            <div class="price">
-                                \price
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="./app/gametitle">
-                        <img src="http://placehold.it/96x54" alt="gametitle">
-                        <div>
-                            <div class="gametitle">
-                                gametitle
-                            </div>
-                            <div class="price">
-                                \price
-                            </div>
-                        </div>
-                    </a>
-                </li>
+                <%--出力形式サンプル - アンダーパネル--%>
+                <%--<li>--%>
+                    <%--<a href="./app/gametitle">--%>
+                        <%--<img src="http://placehold.it/96x54" alt="gametitle">--%>
+                        <%--<div>--%>
+                            <%--<div class="gametitle">--%>
+                                <%--gametitle--%>
+                            <%--</div>--%>
+                            <%--<div class="price">--%>
+                                <%--\price--%>
+                            <%--</div>--%>
+                        <%--</div>--%>
+                    <%--</a>--%>
+                <%--</li>--%>
+                    <%
+                        request.getRequestDispatcher("new-panel").include(request, response);
+                    %>
             </ul>
         </div>
         <div class="under-column">
             もうすぐ発売
             <ul>
-                <li>
-                    <a href="./app/gametitle">
-                        <img src="http://placehold.it/96x54" alt="gametitle">
-                        <div>
-                            <div class="gametitle">
-                                gametitle
-                            </div>
-                            <div class="price">
-                                \price
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="./app/gametitle">
-                        <img src="http://placehold.it/96x54" alt="gametitle">
-                        <div>
-                            <div class="gametitle">
-                                gametitle
-                            </div>
-                            <div class="price">
-                                \price
-                            </div>
-                        </div>
-                    </a>
-                </li>
+                <%--出力形式サンプル - アンダーパネル--%>
+                <%--<li>--%>
+                    <%--<a href="./app/gametitle">--%>
+                        <%--<img src="http://placehold.it/96x54" alt="gametitle">--%>
+                        <%--<div>--%>
+                            <%--<div class="gametitle">--%>
+                                <%--gametitle--%>
+                            <%--</div>--%>
+                            <%--<div class="price">--%>
+                                <%--\price--%>
+                            <%--</div>--%>
+                        <%--</div>--%>
+                    <%--</a>--%>
+                <%--</li>--%>
+                    <%
+                        request.getRequestDispatcher("onsale-panel").include(request, response);
+                    %>
             </ul>
         </div>
     </div>
