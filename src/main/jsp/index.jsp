@@ -15,9 +15,7 @@
                     <%--</div>--%>
                 <%--</a>--%>
             <%--</li>--%>
-                <%
-                    request.getRequestDispatcher("main-panel").include(request, response);
-                %>
+                <jsp:include page="/mainpanel" flush="true"/>
         </ul>
     </div>
 
@@ -39,9 +37,9 @@
                         <%--</div>--%>
                     <%--</a>--%>
                 <%--</li>--%>
-                    <%
-                        request.getRequestDispatcher("popular-panel").include(request, response);
-                    %>
+                    <%--<%--%>
+                        <%--request.getRequestDispatcher("popular-panel").include(request, response);--%>
+                    <%--%>--%>
             </ul>
         </div>
         <div class="under-column">
@@ -61,9 +59,9 @@
                         <%--</div>--%>
                     <%--</a>--%>
                 <%--</li>--%>
-                    <%
-                        request.getRequestDispatcher("new-panel").include(request, response);
-                    %>
+                    <%--<%--%>
+                        <%--request.getRequestDispatcher("new-panel").include(request, response);--%>
+                    <%--%>--%>
             </ul>
         </div>
         <div class="under-column">
@@ -83,9 +81,9 @@
                         <%--</div>--%>
                     <%--</a>--%>
                 <%--</li>--%>
-                    <%
-                        request.getRequestDispatcher("onsale-panel").include(request, response);
-                    %>
+                    <%--<%--%>
+                        <%--request.getRequestDispatcher("onsale-panel").include(request, response);--%>
+                    <%--%>--%>
             </ul>
         </div>
     </div>
