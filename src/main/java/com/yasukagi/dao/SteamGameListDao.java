@@ -12,6 +12,7 @@ public class SteamGameListDao implements ISteamGameListDao {
             SteamGameList steamGameList = new SteamGameList();
             steamGameList.setAppId(rs.getInt("app_id"));
             steamGameList.setGameTitle(rs.getString("game_title"));
+            steamGameList.setGamePrice(rs.getBigDecimal("game_price"));
             list.add(steamGameList);
         }
         return list;

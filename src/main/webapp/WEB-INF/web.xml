@@ -19,4 +19,13 @@
         <servlet-name>test</servlet-name>
         <url-pattern>/Test</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>main-panel</servlet-name>
+        <servlet-class>com.yasukagi.MainGamelistPanelServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>main-panel</servlet-name>
+        <url-pattern>/mainpanel</url-pattern>
+    </servlet-mapping>
 </web-app>
