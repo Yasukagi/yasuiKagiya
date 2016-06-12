@@ -14,7 +14,7 @@ import java.util.Properties;
  */
 public class Configure {
   private Properties properties;
-  private static final Logger logger = LogManager.getLogger();
+  private static final Logger logger = LogManager.getLogger(Configure.class);
 
   /**
    * 読み込むプロパティファイルを渡す
@@ -36,7 +36,13 @@ public class Configure {
    * @param key キー
    * @return キーに対応する値
    */
-  public String getProperty(String key) {
+  public String getStringConfig(String key) {
     return properties.getProperty(key);
+  }
+  public Integer getIntConfig(String key) {
+    return Integer.parseInt(properties.getProperty(key));
+  }
+  public Long getLongConfig(String key) {
+    return Long.parseLong(properties.getProperty(key));
   }
 }
