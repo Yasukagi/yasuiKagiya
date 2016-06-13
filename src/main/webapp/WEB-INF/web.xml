@@ -13,7 +13,7 @@
     </jsp-config>
     <servlet>
         <servlet-name>test</servlet-name>
-        <servlet-class>com.yasukagi.testServlet</servlet-class>
+        <servlet-class>com.yasukagi.servlet.testServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>test</servlet-name>
@@ -22,7 +22,7 @@
     
     <servlet>
         <servlet-name>main-panel</servlet-name>
-        <servlet-class>com.yasukagi.MainGamelistPanelServlet</servlet-class>
+        <servlet-class>com.yasukagi.servlet.PanelServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>main-panel</servlet-name>

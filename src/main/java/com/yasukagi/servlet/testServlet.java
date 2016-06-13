@@ -1,4 +1,4 @@
-package com.yasukagi;
+package com.yasukagi.servlet;
 
 import com.yasukagi.dao.SteamGameList;
 import com.yasukagi.dao.SteamGameListDao;

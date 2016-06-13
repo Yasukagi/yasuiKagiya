@@ -1,6 +1,9 @@
 CREATE TABLE IF NOT EXISTS steam_gamelist (
   app_id INTEGER NOT NULL PRIMARY KEY,
   game_title VARCHAR(255) NOT NULL,
-  game_price NUMERIC(15,2) NOT NULL,
+  game_price_steam NUMERIC(15,2) NOT NULL,
+  game_cheapest NUMERIC(15,2) NOT NULL,
+  release_date DATE,
+  is_game BOOLEAN NOT NULL,
   time_stamp DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) engine=InnoDB;
