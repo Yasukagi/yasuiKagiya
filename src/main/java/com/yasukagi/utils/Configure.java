@@ -3,7 +3,6 @@ package com.yasukagi.utils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
@@ -23,11 +22,11 @@ public class Configure {
   public Configure(String file) {
     properties = new Properties();
     try {
-      InputStream inputStream = new FileInputStream(file);
+      InputStream inputStream = Configure.class.getClassLoader().getResourceAsStream(file);
       properties.load(inputStream);
       inputStream.close();
     } catch (IOException e) {
-      logger.info(e.getMessage());
+      logger.error(e.getMessage(), e);
     }
   }
 
