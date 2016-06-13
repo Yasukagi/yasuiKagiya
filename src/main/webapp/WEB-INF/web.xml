@@ -11,15 +11,7 @@
             <include-coda>/common/footer.jsp</include-coda>
         </jsp-property-group>
     </jsp-config>
-    <servlet>
-        <servlet-name>test</servlet-name>
-        <servlet-class>com.yasukagi.servlet.testServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>test</servlet-name>
-        <url-pattern>/Test</url-pattern>
-    </servlet-mapping>
-    
+
     <servlet>
         <servlet-name>main-panel</servlet-name>
         <servlet-class>com.yasukagi.servlet.PanelServlet</servlet-class>
