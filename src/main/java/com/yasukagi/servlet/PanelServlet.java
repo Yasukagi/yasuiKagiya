@@ -25,8 +25,8 @@ public class PanelServlet extends HttpServlet{
 
     GameDao dao = new GameDao();
     List<Game> games = dao.findGameByLimit(config.getIntConfig("display.game.number"));
-    // TODO: add comparator & html generator
-    MainPanelHtmlGen htmlGen = new MainPanelHtmlGen();
+    // TODO: add comparator
+    MainPanelHtmlGen htmlGen = MainPanelHtmlGen.getInstance();
     out.println(htmlGen.createHtml(games));
   }
 }
