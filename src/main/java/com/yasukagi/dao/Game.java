@@ -79,4 +79,8 @@ public class Game {
   public boolean isGame() {
     return isGame;
   }
+
+  public BigDecimal getDiscountRate() {
+    return gameCheapest.divide(gamePriceSteam, BigDecimal.ROUND_HALF_DOWN);
+  }
 }

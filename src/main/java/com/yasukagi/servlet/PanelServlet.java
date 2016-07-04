@@ -1,5 +1,6 @@
 package com.yasukagi.servlet;
 
+import com.yasukagi.DiscountComp;
 import com.yasukagi.MainPanelHtmlGen;
 import com.yasukagi.dao.Game;
 import com.yasukagi.dao.GameDao;
@@ -13,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Collections;
 import java.util.List;
 
 public class PanelServlet extends HttpServlet{
@@ -25,8 +27,10 @@ public class PanelServlet extends HttpServlet{
 
     GameDao dao = new GameDao();
     List<Game> games = dao.findGameByLimit(config.getIntConfig("display.game.number"));
-    // TODO: add comparator & html generator
+    Collections.sort(games, new DiscountComp());
     MainPanelHtmlGen htmlGen = new MainPanelHtmlGen();
     out.println(htmlGen.createHtml(games));
+    // TODO: リクエストに関する情報を出すようにする
+    logger.info("get request");
   }
 }
