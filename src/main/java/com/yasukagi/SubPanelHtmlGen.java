@@ -4,7 +4,19 @@ import com.yasukagi.dao.Game;
 
 import java.util.List;
 
+/**
+ * サブパネルのHTMLを生成するジェネレータ
+ * シングルトンオブジェクト
+ */
 public class SubPanelHtmlGen implements IHtmlGenerator {
+
+  private static final SubPanelHtmlGen singleton = new SubPanelHtmlGen();
+
+  private SubPanelHtmlGen() {/*NOP*/}
+
+  public static SubPanelHtmlGen getInstance() {
+    return singleton;
+  }
 
   public String createHtml(List<Game> games) {
     StringBuilder sb = new StringBuilder();

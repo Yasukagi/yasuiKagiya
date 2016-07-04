@@ -46,4 +46,8 @@ public class DaoConnector {
   public ResultSet executeQuery(String sql) throws SQLException {
     return smt.executeQuery(sql);
   }
+
+  public int executeUpdate(String sql) throws SQLException {
+    return smt.executeUpdate(sql);
+  }
 }
