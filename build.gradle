@@ -21,3 +21,8 @@ dependencies {
 war{
     from 'src/main/jsp'
 }
+
+def defaultEncoding = 'UTF-8'
+compileJava {
+    options.encoding = defaultEncoding
+}
