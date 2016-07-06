@@ -1,6 +1,6 @@
 package com.yasukagi.tools;
 
-import com.yasukagi.dao.DaoConnector;
+import com.yasukagi.dao.DbConnection;
 import com.yasukagi.utils.Configure;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 /**
  データベースセットアップスクリプト
- 説明 ： 必要なデータベースを任意のユーザに対して生成する．yasukagiServletの初回セットアップ時には必ず実行しましょう．
+ 必要なデータベースを任意のユーザに対して生成する．yasukagiServletの初回セットアップ時には必ず実行しましょう．
  **/
 public class SetupDb {
   private static final Logger logger = LogManager.getLogger(SetupDb.class);
@@ -20,14 +20,12 @@ public class SetupDb {
     Configure config = new Configure("database.properties");
     String rootDir = System.getProperty("user.dir");
     try {
+      DbConnection db = new DbConnection();
+      //データベース作成
       String dbName =  config.getStringConfig("db.name");
-      DaoConnector db = new DaoConnector(dbName);
-//      //データベース作成
-//      String sql = "CREATE DATABASE IF NOT EXISTS " + dbName;
-//      db.executeQuery(sql);
-      //データベース選択
-      String sql = "USE " + dbName;
-      db.executeQuery(sql);
+      String sql = "CREATE DATABASE IF NOT EXISTS " + dbName;
+      db.executeUpdate(sql);
+      logger.info("CREATE " + dbName);
 
       //resourcesディレクトリ以下のsqlを全て実行する
       File[] dir = new File(rootDir + "/src/main/resources/").listFiles();
@@ -36,6 +34,7 @@ public class SetupDb {
         return;
       }
 
+      DbConnection dao = new DbConnection(dbName);
       for(File file : dir) {
         if(!file.getName().endsWith(".sql"))
           continue;
@@ -45,8 +44,8 @@ public class SetupDb {
           logger.error(e.getMessage(), e);
           continue;
         }
-        db.executeUpdate(sql);
-        System.out.println(sql);
+        dao.executeUpdate(sql);
+        logger.info("CREATE " + file.getName());
       }
     } catch (SQLException e) {
       logger.error(e.getMessage(), e);

@@ -6,13 +6,13 @@ package com.yasukagi.dao;
  * Daoに共通する機能はここにまとめる
  */
 public class AbstractDao {
-  protected final DaoConnector dao;
+  protected final DbConnection dao;
 
   /**
    * コンストラクタ
    * @param dbName データベース名
    */
   public AbstractDao(String dbName) {
-    this.dao = new DaoConnector(dbName);
+    this.dao = new DbConnection(dbName);
   }
 }

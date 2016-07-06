@@ -12,17 +12,17 @@ import java.sql.*;
  * DaoConnectorインスタンスを生成し，
  * 実際にDaoインスタンスを作る際は，このインスタンスを渡す
  */
-public class DaoConnector {
+public class DbConnection {
   private final Configure config = new Configure("database.properties");
   private Statement smt;
 
-  private static final Logger logger = LogManager.getLogger(DaoConnector.class);
+  private static final Logger logger = LogManager.getLogger(DbConnection.class);
 
   /**
-   * コンストラクタ
+   * コンストラクタ. DBを指定する
    * @param dbName データベース名
    */
-  public DaoConnector(String dbName) {
+  public DbConnection(String dbName) {
     String driver = config.getStringConfig("db.driver.class");
     String port = config.getStringConfig("db.port");
     String userPass = config.getStringConfig("db.user.pass");
@@ -33,6 +33,24 @@ public class DaoConnector {
       Connection con = DriverManager.getConnection("jdbc:mysql://localhost:" + port + "/" + dbName + "?autoReconnect=true&useSSL=false", userName, userPass);
       this.smt = con.createStatement();
     } catch (IllegalAccessException | InstantiationException | SQLException | ClassNotFoundException e) {
+      logger.error(e.getMessage(), e);
+    }
+  }
+
+  /**
+   * コンストラクタ．DBは選択しない
+   */
+  public DbConnection() {
+    String driver = config.getStringConfig("db.driver.class");
+    String port = config.getStringConfig("db.port");
+    String userPass = config.getStringConfig("db.user.pass");
+    String userName = config.getStringConfig("db.user.name");
+
+    try {
+      Class.forName(driver).newInstance();
+      Connection con = DriverManager.getConnection("jdbc:mysql://localhost:" + port + "?autoReconnect=true&useSSL=false", userName, userPass);
+      this.smt = con.createStatement();
+    } catch (IllegalAccessException | ClassNotFoundException | SQLException | InstantiationException e) {
       logger.error(e.getMessage(), e);
     }
   }
