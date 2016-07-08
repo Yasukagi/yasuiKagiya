@@ -1,7 +1,8 @@
 package com.yasukagi.dao;
 
+import org.joda.time.DateTime;
+
 import java.math.BigDecimal;
-import java.util.Date;
 
 /**
  * gameテーブルの内容をマッピングするクラス
@@ -11,7 +12,7 @@ public class Game {
   private final String gameTitle;
   private final BigDecimal gamePriceSteam;
   private final BigDecimal gameCheapest;
-  private final Date releaseDate;
+  private final DateTime releaseDate;
   private final boolean isGame;
 
   public static class Builder {
@@ -19,7 +20,7 @@ public class Game {
     private String gameTitle;
     private BigDecimal gamePriceSteam;
     private  BigDecimal gameCheapest;
-    private  Date releaseDate;
+    private DateTime releaseDate;
     private boolean isGame;
 
     public Builder () {}
@@ -36,7 +37,7 @@ public class Game {
     public Builder gameCheapest(BigDecimal gameCheapest) {
       this.gameCheapest = gameCheapest; return this;
     }
-    public Builder releaseDate(Date releaseDate) {
+    public Builder releaseDate(DateTime releaseDate) {
       this.releaseDate = releaseDate; return this;
     }
     public Builder isGame(boolean isGame) {
@@ -72,7 +73,7 @@ public class Game {
     return gameCheapest;
   }
 
-  public Date getReleaseDate() {
+  public DateTime getReleaseDate() {
     return releaseDate;
   }
 
