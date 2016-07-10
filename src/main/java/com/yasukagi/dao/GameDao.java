@@ -2,6 +2,7 @@ package com.yasukagi.dao;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.joda.time.DateTime;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -23,7 +24,7 @@ public class GameDao extends AbstractDao implements IGameDao {
           .gameTitle(rs.getString("game_title"))
           .gamePriceSteam(rs.getBigDecimal("game_price_steam"))
           .gameCheapest(rs.getBigDecimal("game_cheapest"))
-          .releaseDate(rs.getDate("release_date"))
+          .releaseDate(new DateTime(rs.getDate("release_date")))
           .isGame(rs.getBoolean("is_game")).build();
       list.add(game);
     }

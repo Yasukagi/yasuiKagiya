@@ -1,4 +1,4 @@
-package com.yasukagi;
+package com.yasukagi.comparator;
 
 import com.yasukagi.dao.Game;
 

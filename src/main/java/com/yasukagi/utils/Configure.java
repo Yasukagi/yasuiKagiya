@@ -44,4 +44,7 @@ public class Configure {
   public Long getLongConfig(String key) {
     return Long.parseLong(properties.getProperty(key));
   }
+  public Double getDoubleConfig(String key) {
+    return Double.parseDouble(properties.getProperty(key));
+  }
 }
