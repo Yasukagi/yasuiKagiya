@@ -3,7 +3,6 @@ package com.yasukagi.dao;
 import org.joda.time.DateTime;
 
 import java.math.BigDecimal;
-
 /**
  * gameテーブルの内容をマッピングするクラス
  */
@@ -81,7 +80,15 @@ public class Game {
     return isGame;
   }
 
+  /**
+   * 割引率を計算する．小数点以下の桁数は2
+   * 例
+   * gamePriceSteam : 1980
+   * gameCheapest : 480
+   * returun : 0.24 つまり．24%
+   * @return 割引率
+   * */
   public BigDecimal getDiscountRate() {
-    return gameCheapest.divide(gamePriceSteam, BigDecimal.ROUND_HALF_DOWN);
+    return gameCheapest.divide(gamePriceSteam, 2, BigDecimal.ROUND_HALF_DOWN);
   }
 }

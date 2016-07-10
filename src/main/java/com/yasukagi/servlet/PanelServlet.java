@@ -1,12 +1,13 @@
 package com.yasukagi.servlet;
 
-import com.yasukagi.DiscountComp;
 import com.yasukagi.MainPanelHtmlGen;
+import com.yasukagi.comparator.ReleaseDiscountComp;
 import com.yasukagi.dao.Game;
 import com.yasukagi.dao.GameDao;
 import com.yasukagi.utils.Configure;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.joda.time.DateTime;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -27,7 +28,7 @@ public class PanelServlet extends HttpServlet{
 
     GameDao dao = new GameDao();
     List<Game> games = dao.findGameByLimit(config.getIntConfig("display.game.number"));
-    Collections.sort(games, new DiscountComp());
+    Collections.sort(games, new ReleaseDiscountComp(new DateTime()));
     MainPanelHtmlGen htmlGen = MainPanelHtmlGen.getInstance();
     out.println(htmlGen.createHtml(games));
     // TODO: リクエストに関する情報を出すようにする
