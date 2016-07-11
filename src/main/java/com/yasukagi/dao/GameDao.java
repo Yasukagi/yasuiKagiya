@@ -13,7 +13,7 @@ public class GameDao extends AbstractDao implements IGameDao {
   private static final Logger logger = LogManager.getLogger(GameDao.class);
 
   public GameDao() {
-    super("db_yasukagi");
+    super("yasukagi_db");
   }
 
   private List<Game> convert(ResultSet rs) throws SQLException {
